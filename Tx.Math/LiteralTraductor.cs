@@ -42,19 +42,6 @@ namespace Tx.Math
                     return "Numero demasiado grande.";
                     break;
             }
-            //       Case Longitud(numero) of
-            //  1: s:=Unidades(numero);
-            //  2: s:=Decenas(numero);
-            //  3: s:=Centenas(numero);
-            //  4: s:=UnidadesDeMillar(numero);
-            //  5: s:=DecenasDeMillar(numero);
-            //  6: s:=CentenasDeMillar(numero);
-            //  7: s:=UnidadesDeMillon(numero);
-            //  8: s:=DecenasdeMillon(numero);
-            //  9: s:=CentenasDeMillon(numero);
-            //  else
-            //s:='Demasiado grande';
-            //  end;
         }
 
         private static string MillonHundreds(int number, CurrencyGenere genere)
@@ -63,38 +50,13 @@ namespace Tx.Math
             hundreds = Regex.Replace(hundreds, "(?<xxx>as)", "os");
             if (hundreds.EndsWith("na")) hundreds = hundreds.Remove(hundreds.Length - 1, 1);
             return hundreds + " millones " + MillerHundreds(number % 1000000, genere);
-            //   var c = tmp[0].ToString();
-            ////c:=tmp[1];
-            //   var i = 1;
-            //while ( (c!=" ") && (tmp.Length>=i) )
-            //{
-            //    if ((tmp[i] == 'a') && (tmp[i + 1] == 's'))
-            //    {
-            //        //tmp[i]='o';
-            //        tmp= tmp.
-            //        break;
-            //    }
-            //    i++;
-            //}
-            //   i:=Length(tmp);
-            //c:= tmp[i-1]+tmp[i];
-            //if c='na' then
-            //SetLength(tmp,i-1);
-            //CentenasDeMillon:=
         }
 
         private static string MillonTens(int number, CurrencyGenere genere)
         {
             var tens = Tens(number / 1000000, genere);
             if (tens.EndsWith("na")) tens = tens.Remove(tens.Length - 1, 1);
-            //var length = tens.Length;
-            //string c = tens[length - 1].ToString() + tens[length].ToString();
-            //if (c=="na") tens = tens.Remove(length - 1, 1);
             return tens + " millones " + MillerHundreds(number % 1000000, genere);
-            //i:=Length(tmp);
-            //c:= tmp[i-1]+tmp[i];
-            //if c='na' then
-            //SetLength(tmp,i-1);
         }
 
         private static string MillionUnits(int number, CurrencyGenere genere)
@@ -220,13 +182,6 @@ namespace Tx.Math
                 default: return Tens(number - number % 10, genere) + " y " + Units(number % 10, genere);
 
             }
-
-
-            //20: Decenas:='';
-            //21: Decenas:='veintiuna';
-            //22: Decenas:='veintidós';
-            //23: Decenas:='veintitrés';
-            //24..29: Decenas:='veinti'+Unidades(numero mod 10);
         }
 
         private static string Units(int number, CurrencyGenere genere = CurrencyGenere.Male, CurrencyLanguage spanish = CurrencyLanguage.Spanish)

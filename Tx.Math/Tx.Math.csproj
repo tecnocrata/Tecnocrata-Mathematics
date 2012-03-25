@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Anagram.cs" />
     <Compile Include="ComplexNumber.cs" />
     <Compile Include="Set.cs" />
     <Compile Include="LiteralTraductor.cs" />

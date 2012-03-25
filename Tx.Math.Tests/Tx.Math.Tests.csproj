@@ -49,6 +49,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ComplexNumberTests.cs" />
     <Compile Include="SetTests.cs" />
+    <Compile Include="AnagramTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tx.Math\Tx.Math.csproj">

@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComplexNumber.cs" />
+    <Compile Include="Set.cs" />
     <Compile Include="LiteralTraductor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
